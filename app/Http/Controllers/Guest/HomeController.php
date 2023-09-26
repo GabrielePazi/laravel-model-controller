@@ -8,8 +8,9 @@ use App\Models\Movie;
 
 class HomeController extends Controller
 {
-    public function index() {
-        $film = Movie::all();
-        return view('home', ["movies" => $film]);
+    public function index()
+    {
+        $data = Movie::all();
+        return view('home', ["movies" => $data]);
     }
 }
